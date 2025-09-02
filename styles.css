@@ -2,7 +2,8 @@
   --bg: #ffffff;
   --card: #f9fafb;
   --muted: #6b7280;
-  --accent: #facc15;
+  --accent: #facc15; /* gold */
+  --primary: #1e3a8a; /* professional navy blue */
   --glass: rgba(0, 0, 0, 0.02);
   --container: 1100px;
 }
@@ -29,49 +30,54 @@ body {
 .site-header {
   position: sticky;
   top: 0;
-  backdrop-filter: blur(6px);
-  background: rgba(255, 255, 255, 0.9);
-  border-bottom: 1px solid #e5e7eb;
+  background: var(--primary);
+  color: #fff;
+  border-bottom: 2px solid var(--accent);
   z-index: 10;
+  padding: 10px 0;
+  min-height: 54px; /* smaller height for mobile */
 }
 
 .header-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 12px 20px;
+  padding: 6px 16px;
+  flex-wrap: wrap;
 }
 
 .brand {
-  color: var(--accent);
-  font-weight: 700;
-  font-size: 20px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #fff;
   text-decoration: none;
 }
 
 .brand span {
-  color: #111827;
+  color: var(--accent);
   margin-left: 6px;
   font-weight: 600;
 }
 
 .nav {
   display: flex;
-  gap: 14px;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
 .nav a {
-  color: var(--muted);
+  color: #fff;
   text-decoration: none;
-  padding: 8px 12px;
-  border-radius: 8px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 15px;
 }
 
 .nav a.active,
 .nav a:hover {
-  color: #000;
   background: var(--accent);
-  box-shadow: 0 6px 18px rgba(250, 204, 21, 0.2);
+  color: #111827;
+  font-weight: 600;
 }
 
 /* Hero */
@@ -92,24 +98,43 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.55);
+  background: linear-gradient(to bottom, rgba(0,0,0,0.65), rgba(0,0,0,0.4));
+  z-index: 1;
 }
 
 .hero-content {
   position: relative;
   z-index: 2;
-  max-width: 800px;
+  max-width: 850px;
   padding: 20px;
+  animation: fadeUp 1s ease-in-out;
+}
+
+/* Highlighted SPARK Title */
+.hero-content::before {
+  content: "SPARK 1.0";
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 80px;
+  font-weight: 800;
+  color: rgba(250, 204, 21, 0.12);
+  letter-spacing: 4px;
+  white-space: nowrap;
+  z-index: -1;
 }
 
 .hero-content h1 {
   margin: 0 0 16px;
-  font-size: 42px;
+  font-size: 44px;
   font-weight: 700;
+  color: var(--accent);
+  text-shadow: 0 4px 12px rgba(0,0,0,0.6);
 }
 
 .hero-content p {
-  margin: 0 0 24px;
+  margin: 0 0 28px;
   font-size: 18px;
   line-height: 1.6;
   color: #f3f4f6;
@@ -118,7 +143,13 @@ body {
 .hero-ctas {
   display: flex;
   justify-content: center;
-  gap: 14px;
+  gap: 16px;
+}
+
+/* Simple Fade Animation */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* Buttons */
@@ -132,7 +163,7 @@ body {
 }
 
 .btn.primary {
-  background: #111827;
+  background: var(--primary);
   color: var(--accent);
   box-shadow: 0 10px 30px rgba(17, 24, 39, 0.2);
 }
@@ -247,11 +278,30 @@ body {
 
 /* Footer */
 .site-footer {
-  padding: 24px;
-  margin-top: 36px;
+  background: var(--primary);
+  color: #fff;
+  padding: 16px 0;
   text-align: center;
-  color: var(--muted);
-  border-top: 1px solid #e5e7eb;
+  font-size: 14px;
+  margin-top: 40px;
+  border-top: 2px solid var(--accent);
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+/* Logos */
+.college-logo img,
+.ecell-logo img {
+  max-height: 52px;
+  vertical-align: middle;
+}
+
+.logos {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 /* Responsive */
@@ -259,6 +309,10 @@ body {
   .hero {
     height: auto;
     padding: 60px 20px;
+  }
+  .hero-content::before {
+    font-size: 46px;
+    top: -40px;
   }
   .hero-content h1 {
     font-size: 28px;
@@ -273,224 +327,50 @@ body {
     flex-direction: column;
   }
 }
-/* Hero */
-.hero {
-  position: relative;
-  height: 90vh;
-  background: url("images/banner.png") center/cover no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: #fff;
-  overflow: hidden;
-  border-radius: 0 0 12px 12px;
-}
 
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.65), rgba(0,0,0,0.4));
-  z-index: 1;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 850px;
-  padding: 20px;
-  animation: fadeUp 1s ease-in-out;
-}
-
-/* Highlighted SPARK Title (moves up & styled) */
-.hero-content::before {
-  content: "SPARK 1.0";
-  position: absolute;
-  top: -60px; /* moves it above heading */
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 80px;
-  font-weight: 800;
-  color: rgba(250, 204, 21, 0.12); /* faint gold glow */
-  letter-spacing: 4px;
-  white-space: nowrap;
-  z-index: -1;
-}
-
-.hero-content h1 {
-  margin: 0 0 16px;
-  font-size: 44px;
-  font-weight: 700;
-  color: #facc15; /* gold highlight */
-  text-shadow: 0 4px 12px rgba(0,0,0,0.6);
-}
-
-.hero-content p {
-  margin: 0 0 28px;
-  font-size: 18px;
-  line-height: 1.6;
-  color: #f3f4f6;
-}
-
-/* Call-to-actions */
-.hero-ctas {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-}
-
-/* Simple Fade Animation */
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(40px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* Mobile Fix */
-@media (max-width: 800px) {
-  .hero-content::before {
-    font-size: 46px;
-    top: -40px;
+/* Compact Navbar on Mobile */
+@media (max-width: 768px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: center;
   }
-  .hero-content h1 {
-    font-size: 28px;
+  .nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 4px;
+  }
+  .nav a {
+    margin: 2px 4px;
+    padding: 5px 8px;
+    font-size: 14px;
+  }
+  .site-header {
+    padding: 6px 0;
   }
 }
-.site-footer {
-  background: #000;          /* black background */
-  color: #fff;               /* white text */
-  padding: 16px 0;
-  text-align: center;
-  font-size: 14px;
-  margin-top: 40px;
-}
-
-.site-footer p {
-  margin: 0;
-}
-.ecell-wrapper {
-  text-align: right;  /* pushes logo to right side */
-  margin-top: 20px;
-}
-
-.ecell-top {
-  max-width: 140px;
-  height: auto;
-}
-/* College logo (top-left inside header) */
-.college-logo img {
-  max-height: 60px;
-  margin-right: 15px;
-  vertical-align: middle;
-}
-
-/* Align logo + brand side by side */
+/* Header inner with logos + brand centered */
 .header-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-.brand {
-  font-size: 1.6rem;
-  font-weight: bold;
-  color: #333;
-}
-/* Logo group alignment */
-.logos {
-  display: flex;
-  align-items: center;
-  gap: 10px; /* space between logos */
+  padding: 6px 20px;
 }
 
 .college-logo img,
 .ecell-logo img {
-  max-height: 60px; /* keep both logos aligned */
-  vertical-align: middle;
+  max-height: 55px;
+  transition: transform 0.2s ease;
 }
-/* Header black box style */
-.site-header {
-  background: #000;
+
+.college-logo img:hover,
+.ecell-logo img:hover {
+  transform: scale(1.05);
+}
+
+/* Keep brand in center */
+.brand {
+  font-size: 1.6rem;
+  font-weight: bold;
   color: #fff;
-  padding: 12px 0;
-}
-
-.site-header .brand,
-.site-header .nav a {
-  color: #fff;
-}
-
-.site-header .nav a:hover,
-.site-header .brand span {
-  color: #facc15; /* highlight color */
-}
-/* Header black box */
-.site-header {
-  background: #000;
-  color: #fff;
-  padding: 14px 0;            /* a bit more height for mobile */
-  min-height: 60px;           /* ensures proper height */
-}
-
-/* Brand and nav links */
-.site-header .brand {
-  color: #fff;
-}
-
-.site-header .nav a {
-  color: #fff;                /* always visible */
-  text-decoration: none;
-  padding: 10px 14px;
-  display: inline-block;
-}
-
-/* Active / hover states */
-.site-header .nav a:hover,
-.site-header .nav a.active {
-  background: #e63946;        /* red highlight */
-  border-radius: 6px;
-  color: #fff;
-}
-
-/* Prevent mobile text disappearing (tap highlight bug) */
-.site-header .nav a:active {
-  color: #fff;
-  background: #e63946;
-}
-
-/* Responsive: stack navbar on small screens */
-@media (max-width: 768px) {
-  .header-inner {
-    flex-direction: column;
-    align-items: center;
-  }
-  .nav {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .nav a {
-    margin: 4px 6px;
-  }
-}
-@media (max-width: 768px) {
-  .header-inner {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .nav {
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 6px;
-  }
-
-  .nav a {
-    margin: 2px 4px;
-    padding: 6px 10px;
-    font-size: 14px;     /* smaller font */
-  }
-
-  .site-header {
-    padding: 8px 0;      /* reduce header height */
-  }
+  text-align: center;
 }
