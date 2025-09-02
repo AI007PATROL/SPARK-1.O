@@ -368,3 +368,12 @@ body {
 .site-footer p {
   margin: 0;
 }
+.ecell-wrapper {
+  text-align: right;  /* pushes logo to right side */
+  margin-top: 20px;
+}
+
+.ecell-top {
+  max-width: 140px;
+  height: auto;
+}
