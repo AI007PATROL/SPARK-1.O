@@ -1,376 +1,110 @@
-:root {
-  --bg: #ffffff;
-  --card: #f9fafb;
-  --muted: #6b7280;
-  --accent: #facc15; /* gold */
-  --primary: #1e3a8a; /* professional navy blue */
-  --glass: rgba(0, 0, 0, 0.02);
-  --container: 1100px;
-}
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Contact — SPARK 1.0</title>
+<link rel="stylesheet" href="styles.css">
+</head><body>
+<header class="site-header"><div class="container header-inner">
+  <a class="brand" href="index.html">SPARK <span>1.0</span></a>
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="events.html">Upcoming Events</a>
+    <a href="details.html">Event Details</a>
+    <a href="contact.html" class="active">Contact</a>
+  </nav>
+</div></header>
 
-* {
-  box-sizing: border-box;
-}
+<section class="container contact-section">
+  <h2>Coordinators & Contacts</h2>
+  <p>Overall Coordinators</p>
+  <div class="grid contacts-grid">
+    <div class="contact-card">
+      <h4>Overall Faculty Co-Ordinator</h4>
+      <p>Dr. V. Haribalaji</p>
+      <p>8122193139</p>
+    </div>
+    <div class="contact-card">
+      <h4>Overall Student Co-Ordinator</h4>
+      <p>Mr. Kesavan M</p>
+      <p>7094955909</p>
+    </div>
+    <div class="contact-card">
+      <h4>Overall Student Co-Ordinator</h4>
+      <p>Mr. Jaiganesan M</p>
+      <p>9677756926</p>
+    </div>
+    <div class="contact-card">
+      <h4>Overall Student Co-Ordinator</h4>
+      <p>Ms. Harini V</p>
+      <p>9942809733</p>
+    </div>
+  </div>
 
-body {
-  margin: 0;
-  background: linear-gradient(180deg, #ffffff 0%, #f3f4f6 100%);
-  color: #111827;
-  font-family: Inter, Segoe UI, Arial, Helvetica, sans-serif;
-  line-height: 1.6;
-}
+  <h3>Event-wise Coordinators (Selected)</h3>
+  <div class="grid contacts-grid">
+    <div class="contact-card">
+      <h4>Meta Brand</h4>
+      <p>Faculty: Mr. Devan - 8248657633</p>
+      <p>Student: Mr. Venkatajalapathi - 6385575445</p>
+      <p>Student: Mr. PremKumar - 6381642481</p>
+    </div>
 
-.container {
-  max-width: var(--container);
-  margin: 0 auto;
-  padding: 20px;
-}
+    <div class="contact-card">
+      <h4>MindSprint</h4>
+      <p>Faculty: Dr. R. Valarmathi - 9095788323</p>
+      <p>Student: Mr. Mohan - 9360342119</p>
+      <p>Student: Mr. Sanjai - 9342698266</p>
+    </div>
 
-/* Header */
-.site-header {
-  position: sticky;
-  top: 0;
-  background: var(--primary);
-  color: #fff;
-  border-bottom: 2px solid var(--accent);
-  z-index: 10;
-  padding: 10px 0;
-  min-height: 54px; /* smaller height for mobile */
-}
+    <div class="contact-card">
+      <h4>Prodigy Lab</h4>
+      <p>Faculty: Mrs. Pushpa - 6379706388</p>
+      <p>Student: Mr. Prakashraj - 9597390705</p>
+      <p>Student: Mr. Manoj Kumar - 6385320019</p>
+    </div>
 
-.header-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 6px 16px;
-  flex-wrap: wrap;
-}
+    <div class="contact-card">
+      <h4>Founders Arena</h4>
+      <p>Faculty: Mr. Devan - 8248657633</p>
+      <p>Student: Ms. Gunapriya - 6385268221</p>
+      <p>Student: Ms. Monikka - 8072016490</p>
+    </div>
+  </div>
 
-.brand {
-  font-size: 1.4rem;
-  font-weight: bold;
-  color: #fff;
-  text-decoration: none;
-}
-
-.brand span {
-  color: var(--accent);
-  margin-left: 6px;
-  font-weight: 600;
-}
-
-.nav {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.nav a {
-  color: #fff;
-  text-decoration: none;
-  padding: 6px 10px;
-  border-radius: 6px;
-  font-size: 15px;
-}
-
-.nav a.active,
-.nav a:hover {
-  background: var(--accent);
-  color: #111827;
-  font-weight: 600;
-}
-
-/* Hero */
-.hero {
-  position: relative;
-  height: 90vh;
-  background: url("images/banner.png") center/cover no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: #fff;
-  overflow: hidden;
-  border-radius: 0 0 12px 12px;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.65), rgba(0,0,0,0.4));
-  z-index: 1;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 850px;
-  padding: 20px;
-  animation: fadeUp 1s ease-in-out;
-}
-
-/* Highlighted SPARK Title */
-.hero-content::before {
-  content: "SPARK 1.0";
-  position: absolute;
-  top: -60px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 80px;
-  font-weight: 800;
-  color: rgba(250, 204, 21, 0.12);
-  letter-spacing: 4px;
-  white-space: nowrap;
-  z-index: -1;
-}
-
-.hero-content h1 {
-  margin: 0 0 16px;
-  font-size: 44px;
-  font-weight: 700;
-  color: var(--accent);
-  text-shadow: 0 4px 12px rgba(0,0,0,0.6);
-}
-
-.hero-content p {
-  margin: 0 0 28px;
-  font-size: 18px;
-  line-height: 1.6;
-  color: #f3f4f6;
-}
-
-.hero-ctas {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-}
-
-/* Simple Fade Animation */
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(40px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* Buttons */
-.btn {
-  display: inline-block;
-  padding: 10px 16px;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-.btn.primary {
-  background: var(--primary);
-  color: var(--accent);
-  box-shadow: 0 10px 30px rgba(17, 24, 39, 0.2);
-}
-
-.btn.ghost {
-  border: 1px solid #d1d5db;
-  color: var(--accent);
-  background: transparent;
-}
-
-/* Highlights */
-.highlights {
-  display: flex;
-  gap: 18px;
-  margin-top: 30px;
-}
-
-.card {
-  flex: 1;
-  background: var(--card);
-  padding: 18px;
-  border-radius: 12px;
-  border: 1px solid #e5e7eb;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
-}
-
-.card h3 {
-  margin: 0 0 8px;
-  color: var(--accent);
-}
-
-/* Teaser */
-.teaser {
-  margin: 30px auto;
-  max-width: 900px;
-  text-align: center;
-  color: var(--muted);
-}
-
-/* Events Grid */
-.events-grid .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 18px;
-}
-
-.event-card {
-  background: var(--card);
-  padding: 18px;
-  border-radius: 12px;
-  border: 1px solid #e5e7eb;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-}
-
-.event-card h3 {
-  margin: 0 0 6px;
-  color: var(--accent);
-}
-
-.event-card .date {
-  color: var(--muted);
-  margin-bottom: 10px;
-}
-
-.card-actions {
-  margin-top: 12px;
-  display: flex;
-  gap: 8px;
-}
-
-/* Sections */
-.container section {
-  margin-top: 26px;
-}
-
-/* About */
-.about-hero {
-  display: flex;
-  gap: 26px;
-  align-items: flex-start;
-}
-
-.about-hero .left {
-  flex: 2;
-}
-
-.about-hero .right {
-  flex: 1;
-}
-
-.ecell {
-  max-width: 160px;
-  display: block;
-  margin-left: auto;
-  border-radius: 8px;
-}
-
-/* Contacts */
-.contacts-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 14px;
-  margin-top: 12px;
-}
-
-.contact-card {
-  background: var(--card);
-  padding: 14px;
-  border-radius: 10px;
-  border: 1px solid #e5e7eb;
-}
-
-/* Footer */
-.site-footer {
-  background: var(--primary);
-  color: #fff;
-  padding: 16px 0;
-  text-align: center;
-  font-size: 14px;
-  margin-top: 40px;
-  border-top: 2px solid var(--accent);
-}
-
-.site-footer p {
-  margin: 0;
-}
-
-/* Logos */
-.college-logo img,
-.ecell-logo img {
-  max-height: 52px;
-  vertical-align: middle;
-}
-
-.logos {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-/* Responsive */
-@media (max-width: 800px) {
-  .hero {
-    height: auto;
-    padding: 60px 20px;
-  }
-  .hero-content::before {
-    font-size: 46px;
-    top: -40px;
-  }
-  .hero-content h1 {
-    font-size: 28px;
-  }
-  .hero-content p {
-    font-size: 16px;
-  }
-  .highlights {
-    flex-direction: column;
-  }
-  .about-hero {
-    flex-direction: column;
-  }
-}
-
-/* Compact Navbar on Mobile */
-@media (max-width: 768px) {
-  .header-inner {
-    flex-direction: column;
-    align-items: center;
-  }
-  .nav {
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 4px;
-  }
-  .nav a {
-    margin: 2px 4px;
-    padding: 5px 8px;
-    font-size: 14px;
-  }
-  .site-header {
-    padding: 6px 0;
-  }
-}
-/* Header inner with logos + brand centered */
-.header-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 6px 20px;
-}
-
-.college-logo img,
-.ecell-logo img {
-  max-height: 55px;
-  transition: transform 0.2s ease;
-}
-
-.college-logo img:hover,
-.ecell-logo img:hover {
-  transform: scale(1.05);
-}
-
-/* Keep brand in center */
-.brand {
-  font-size: 1.6rem;
-  font-weight: bold;
-  color: #fff;
-  text-align: center;
-}
+  <h3>Non-Technical & Hackathon Contacts</h3>
+  <div class="grid contacts-grid">
+    <div class="contact-card">
+      <h4>Rhetorica</h4>
+      <p>Faculty: Mrs. Pushpa - 6379706388</p>
+      <p>Student: Ms. Sandhiyashree - 6374004282</p>
+      <p>Student: Ms. Priyanka - 9363284282</p>
+    </div>
+    <div class="contact-card">
+      <h4>Think Sync</h4>
+      <p>Faculty: Mrs. Valarmathi - 9095788323</p>
+      <p>Student: Mr. GowthamaChandran - 7639013065</p>
+      <p>Student: Mr. Sabarishan</p>
+      <p>Student: Ms. Shansree - 9688805196</p>
+    </div>
+    <div class="contact-card">
+      <h4>StartUp IQ</h4>
+      <p>Faculty: Mr. Periyasamy - 7667469100</p>
+      <p>Student: Mr. Darshan - 9498383367</p>
+      <p>Student: Mr. Hariraghavenddar - 6381303148</p>
+    </div>
+    <div class="contact-card">
+      <h4>Brain Hack (Hackathon)</h4>
+      <p>Faculty: Mr. Inbasekaran - 9942013775</p>
+      <p>Student: Mr. Ganesh - 9345190811</p>
+      <p>Student: Ms. Keerthana - 9003890683</p>
+    </div>
+  </div>
+</section>
+<footer class="site-footer">
+  <div class="container">
+    <p>© 2025 <b>SPARK 1.0</b> | R P Sarathy Institute of Technology</p>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body></html>
