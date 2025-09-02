@@ -356,3 +356,15 @@ body {
     font-size: 28px;
   }
 }
+.site-footer {
+  background: #000;          /* black background */
+  color: #fff;               /* white text */
+  padding: 16px 0;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 40px;
+}
+
+.site-footer p {
+  margin: 0;
+}
