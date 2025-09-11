@@ -1,3 +1,6 @@
+// script.js
+
+// All event data
 const events = {
   "Meta Brand": {
     "date":"September 15, 2025",
@@ -18,7 +21,7 @@ const events = {
     ],
     "form":"https://forms.gle/AaKNHgdrVkbBwGHDA"
   },
-  "MindSprint":{
+  "MindSprint": {
     "date":"September 15, 2025",
     "desc":"A high-energy contest where participants solve entrepreneurial challenges with strategy and clarity.",
     "rounds":[
@@ -37,7 +40,7 @@ const events = {
     ],
     "form":"https://forms.gle/kwKQm8oXjSxv5JTG9"
   },
-  "Prodigy Lab":{
+  "Prodigy Lab": {
     "date":"September 16, 2025",
     "desc":"A product expo that celebrates innovation and creativity.",
     "rounds":[
@@ -56,7 +59,7 @@ const events = {
     ],
     "form":"https://forms.gle/S4epzpTDjzijFgtf6"
   },
-  "Founders Arena":{
+  "Founders Arena": {
     "date":"September 16, 2025",
     "desc":"An entrepreneurial pitch event that tests vision, communication, and strategy.",
     "rounds":[
@@ -75,7 +78,7 @@ const events = {
     ],
     "form":"https://forms.gle/w13QB3h7RNmiia6u7"
   },
-  "Rhetorica":{
+  "Rhetorica": {
     "date":"September 17, 2025",
     "desc":"An on-the-spot debate where participants battle it out with logic, wit, and persuasion.",
     "rounds":[
@@ -93,7 +96,7 @@ const events = {
     ],
     "form":"https://forms.gle/46exZDXsnXxMoeL88"
   },
-  "Think Sync":{
+  "Think Sync": {
     "date":"September 18, 2025",
     "desc":"A lively two-stage event designed to test teamwork, quick thinking, and adaptability through exciting games.",
     "rounds":[
@@ -112,7 +115,7 @@ const events = {
     ],
     "form":"https://forms.gle/QcpeQb4HoYKNoWLZ8"
   },
-  "StartUp IQ":{
+  "StartUp IQ": {
     "date":"September 19, 2025",
     "desc":"An exciting quiz-meets-innovation challenge that blends speed, creativity, and business knowledge.",
     "rounds":[
@@ -131,7 +134,7 @@ const events = {
     ],
     "form":"https://forms.gle/kbUerjteLfV2zXrM8"
   },
-  "Brain Hack":{
+  "Brain Hack": {
     "date":"September 20, 2025",
     "desc":"A 4-hour hackathon where innovation meets real-world problem-solving. Teams choose a domain, build a solution, and pitch it within the deadline.",
     "rounds":[
@@ -152,3 +155,71 @@ const events = {
     "form":"https://forms.gle/z3FE3rfoQJBK4tJX8"
   }
 };
+
+// Elements
+const select = document.getElementById("event-select");
+const card = document.getElementById("event-card");
+
+// Populate dropdown
+Object.keys(events).forEach(eventName => {
+  const option = document.createElement("option");
+  option.value = eventName;
+  option.textContent = eventName;
+  select.appendChild(option);
+});
+
+// When user selects → show details
+select.addEventListener("change", () => {
+  const selected = select.value;
+  if (!selected || !events[selected]) {
+    card.classList.add("hidden");
+    return;
+  }
+
+  const ev = events[selected];
+
+  document.getElementById("ev-name").textContent = selected;
+  document.getElementById("ev-date").textContent = ev.date;
+  document.getElementById("ev-desc").textContent = ev.desc;
+
+  // Rounds
+  const roundsDiv = document.getElementById("ev-rounds");
+  roundsDiv.innerHTML = "";
+  ev.rounds.forEach(r => {
+    const p = document.createElement("p");
+    p.textContent = r;
+    roundsDiv.appendChild(p);
+  });
+
+  // Rules
+  const rulesUl = document.getElementById("ev-rules");
+  rulesUl.innerHTML = "";
+  ev.rules.forEach(r => {
+    const li = document.createElement("li");
+    li.textContent = r;
+    rulesUl.appendChild(li);
+  });
+
+  // Coordinators
+  const coordsDiv = document.getElementById("ev-coords");
+  coordsDiv.innerHTML = "";
+  ev.coords.forEach(c => {
+    const p = document.createElement("p");
+    p.textContent = `${c.role}: ${c.name} (${c.phone})`;
+    coordsDiv.appendChild(p);
+  });
+
+  // Register button
+  const actionsDiv = document.getElementById("ev-actions");
+  actionsDiv.innerHTML = "";
+  if (ev.form) {
+    const a = document.createElement("a");
+    a.href = ev.form;
+    a.target = "_blank";
+    a.className = "btn";
+    a.textContent = "Register Now";
+    actionsDiv.appendChild(a);
+  }
+
+  card.classList.remove("hidden");
+});
