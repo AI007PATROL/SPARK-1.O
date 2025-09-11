@@ -1,17 +1,15 @@
 const events = {
   "Meta Brand": {
-    "date":"August 28, 2025",
-    "desc":"Meta Brand is an exciting test of creativity, strategy, and presentation skills, where participants transform ideas into market ready brands. The event unfolds in two competitive rounds.",
+    "date":"September 15, 2025",
+    "desc":"A branding challenge where creativity meets strategy.",
     "rounds":[
-      "Round 1: Merge two well-known brands into a fresh concept with a unique name, tagline, strategy, and pitch.",
-      "Round 2: Teams are given a failing brand to analyse and revive using creative rebranding strategies, target market tweaks, and promotional plans, presented using provided PPT template."
+      "Round 1: Choose one or two companies and create a fresh idea. (3 mins presentation + 2 mins Q&A)",
+      "Round 2: A failing brand will be given; revive it with a new strategy in 5 mins."
     ],
     "rules":[
-      "Teams of up to 4-5 members.",
-      "Plagiarism will result in immediate disqualification.",
-      "Respect time limits; late submissions not considered.",
-      "Participants must bring charged devices for Round 2.",
-      "Mobile phones and gadgets prohibited."
+      "Teams of 4–5 members.",
+      "Work must be original.",
+      "Bring charged laptops for presentation."
     ],
     "coords":[
       {"role":"Faculty Co-Ordinator","name":"Mr. Devan","phone":"8248657633"},
@@ -21,17 +19,16 @@ const events = {
     "form":"https://forms.gle/AaKNHgdrVkbBwGHDA"
   },
   "MindSprint":{
-    "date":"August 29, 2025",
-    "desc":"MindSprint is a high-impact problem-solving competition where participants tackle real-world entrepreneurial challenges with creativity and strategy.",
+    "date":"September 15, 2025",
+    "desc":"A high-energy contest where participants solve entrepreneurial challenges with strategy and clarity.",
     "rounds":[
-      "Round 1: Create and present a compelling business pitch.",
-      "Round 2: Analyse complex scenarios and defend your approach."
+      "Round 1: Case study given on the spot → 5 mins to discuss + 3 mins presentation on handling the challenge.",
+      "Round 2: Financial round → teams analyze budgets and present practical solutions."
     ],
     "rules":[
-      "Teams of up to 4-5 members.",
-      "Be on time – late entries not allowed.",
-      "Mobile phones prohibited.",
-      "Judging criteria announced at venue."
+      "Teams of 4–5 members.",
+      "Be on time for each round.",
+      "Mobile phones not allowed."
     ],
     "coords":[
       {"role":"Faculty Co-Ordinator","name":"Dr. R. Valarmathi","phone":"9095788323"},
@@ -41,15 +38,16 @@ const events = {
     "form":"https://forms.gle/kwKQm8oXjSxv5JTG9"
   },
   "Prodigy Lab":{
-    "date":"August 30, 2025",
-    "desc":"Prodigy Lab is a dynamic product expo competition where entrepreneurial minds showcase their innovative products and solutions to the world.",
+    "date":"September 16, 2025",
+    "desc":"A product expo that celebrates innovation and creativity.",
     "rounds":[
-      "Round 1: Teams present their products to judges highlighting features and market potential."
+      "Round 1: Showcase and explain your own product or prototype.",
+      "Round 2: A random product will be given; market it with creativity."
     ],
     "rules":[
-      "Teams of up to 4-5 members.",
-      "Participants must have a tangible or functional prototype.",
-      "Maintain decorum and follow judges' instructions."
+      "Teams of 4–5 members.",
+      "Functional or demo-ready prototypes required.",
+      "Both hardware and software solutions allowed."
     ],
     "coords":[
       {"role":"Faculty Co-Ordinator","name":"Mrs. Pushpa","phone":"6379706388"},
@@ -59,16 +57,16 @@ const events = {
     "form":"https://forms.gle/S4epzpTDjzijFgtf6"
   },
   "Founders Arena":{
-    "date":"September 01, 2025",
-    "desc":"Founders Arena is an entrepreneurial idea presentation competition where creativity meets strategy.",
+    "date":"September 16, 2025",
+    "desc":"An entrepreneurial pitch event that tests vision, communication, and strategy.",
     "rounds":[
-      "Round 1: Presentation Round — choose theme on-spot and prepare a PowerPoint."
+      "Round 1: Pitch your startup idea (3 mins presentation + 2 mins Q&A).",
+      "Round 2: Analyze your opponent’s startup, critique it, and present why yours is better."
     ],
     "rules":[
-      "Teams up to 4-5 members.",
-      "Plagiarism leads to disqualification.",
-      "Respect time limits.",
-      "Bring charged devices."
+      "Teams of 4–5 members.",
+      "Presentations must be original.",
+      "Themes or critique formats will be given on the spot."
     ],
     "coords":[
       {"role":"Faculty Co-Ordinator","name":"Mr. Devan","phone":"8248657633"},
@@ -78,15 +76,16 @@ const events = {
     "form":"https://forms.gle/w13QB3h7RNmiia6u7"
   },
   "Rhetorica":{
-    "date":"September 02, 2025",
-    "desc":"Rhetorica is an exciting on-the-spot debate where participants are instantly divided into teams and given surprise topics.",
+    "date":"September 17, 2025",
+    "desc":"An on-the-spot debate where participants battle it out with logic, wit, and persuasion.",
     "rounds":[
-      "Opening session, Debate session, Closing session."
+      "Round 1: Problem statements shared a day before. Each team has 5 members, 1 min each, total 10 mins for debate.",
+      "Round 2: Surprise topic given on the spot → 5 mins to discuss before debating."
     ],
     "rules":[
-      "Teams of up to 4-5 members.",
-      "Each participant gets up to 3 minutes to speak.",
-      "No personal attacks or abusive language."
+      "Teams of 5 members.",
+      "Arguments must be logical and respectful.",
+      "Maintain time discipline during rounds."
     ],
     "coords":[
       {"role":"Faculty Co-Ordinator","name":"Mrs. Pushpa","phone":"6379706388"},
@@ -95,16 +94,16 @@ const events = {
     "form":"https://forms.gle/46exZDXsnXxMoeL88"
   },
   "Think Sync":{
-    "date":"September 03, 2025",
-    "desc":"Think Sync is an electrifying two-stage team challenge with surprise topics.",
+    "date":"September 18, 2025",
+    "desc":"A lively two-stage event designed to test teamwork, quick thinking, and adaptability through exciting games.",
     "rounds":[
-      "Round 1: Teams compete; top performers shortlisted.",
-      "Round 2: Fun filled round with twists."
+      "Round 1: A set of fun games to challenge leadership skills and team coordination.",
+      "Round 2: A final game to decide the ultimate winners."
     ],
     "rules":[
-      "Teams of up to 4-5 members.",
-      "Points for correct answers; no negative marking.",
-      "Unfair play leads to disqualification."
+      "Teams of 4–5 members.",
+      "Active participation in all rounds is mandatory.",
+      "Maintain fairness and team spirit throughout."
     ],
     "coords":[
       {"role":"Faculty Co-Ordinator","name":"Mrs. Valarmathi","phone":""},
@@ -114,17 +113,16 @@ const events = {
     "form":"https://forms.gle/QcpeQb4HoYKNoWLZ8"
   },
   "StartUp IQ":{
-    "date":"September 04, 2025",
-    "desc":"StartUp IQ is a high-energy quiz competition designed to challenge participants’ knowledge of entrepreneurship, startups, business strategies, and market trends.",
+    "date":"September 19, 2025",
+    "desc":"An exciting quiz-meets-innovation challenge that blends speed, creativity, and business knowledge.",
     "rounds":[
-      "Round 1: Teams compete.",
-      "Round 2: Second round submissions.",
-      "Round 3: Final presentations."
+      "Round 1: Fast-paced quiz on intellectual property with just 15 seconds to answer each question.",
+      "Round 2: Teams design their desired product, create a unique logo, and give it a distinctive name."
     ],
     "rules":[
-      "Teams of up to 4-5 members.",
-      "Maintain discipline and respect judges.",
-      "Cheating leads to immediate disqualification."
+      "Teams of 4–5 members.",
+      "No use of mobile phones or gadgets.",
+      "Work must be original and creative."
     ],
     "coords":[
       {"role":"Faculty Co-Ordinator","name":"Mr. Periyasamy","phone":"7667469100"},
@@ -134,15 +132,17 @@ const events = {
     "form":"https://forms.gle/kbUerjteLfV2zXrM8"
   },
   "Brain Hack":{
-    "date":"September 05, 2025",
-    "desc":"Brain Hack is an intense, time-bound innovation challenge where participants collaborate in teams to design, build, and present creative tech solutions.",
+    "date":"September 20, 2025",
+    "desc":"A 4-hour hackathon where innovation meets real-world problem-solving. Teams choose a domain, build a solution, and pitch it within the deadline.",
     "rounds":[
-      "One round with multiple sessions during the hackathon."
+      "Domains: • Agriculture & Food • Cutting-edge Technology • Waste Management • Health Monitoring • Social & Civil Innovation",
+      "Format: Teams work for 4 hours to develop a solution, followed by a 5-minute presentation of their idea."
     ],
     "rules":[
-      "Teams of up to 4-5 members.",
-      "Problem statements provided at start; develop within 8 hours.",
-      "Projects must be original; no plagiarized solutions."
+      "Teams of 4–5 members.",
+      "Problem statements will be provided at the start.",
+      "All work must be completed within the given 4 hours.",
+      "Final presentation limited to 5 minutes."
     ],
     "coords":[
       {"role":"Faculty Co-Ordinator","name":"Mr. Inbasekaran","phone":"9942013775"},
@@ -152,60 +152,3 @@ const events = {
     "form":"https://forms.gle/z3FE3rfoQJBK4tJX8"
   }
 };
-
-// populate select box
-document.addEventListener('DOMContentLoaded', ()=>{
-  const sel = document.getElementById('event-select');
-  if(!sel) return;
-  Object.keys(events).forEach(k=>{
-    const opt = document.createElement('option');
-    opt.value = k; opt.textContent = k;
-    sel.appendChild(opt);
-  });
-
-  sel.addEventListener('change', ()=>{
-    const val = sel.value;
-    const card = document.getElementById('event-card');
-    if(!val){ card.classList.add('hidden'); return; }
-    const data = events[val];
-    document.getElementById('ev-name').textContent = val;
-    document.getElementById('ev-date').textContent = data.date;
-    document.getElementById('ev-desc').textContent = data.desc;
-    const rounds = document.getElementById('ev-rounds');
-    rounds.innerHTML = '';
-    data.rounds.forEach(r=>{
-      const p = document.createElement('p');
-      p.textContent = r;
-      rounds.appendChild(p);
-    });
-    const rules = document.getElementById('ev-rules');
-    rules.innerHTML='';
-    data.rules.forEach(r=>{
-      const li=document.createElement('li');
-      li.textContent=r;
-      rules.appendChild(li);
-    });
-    const coords = document.getElementById('ev-coords'); coords.innerHTML='';
-    data.coords.forEach(c=>{
-      const d=document.createElement('div');
-      d.textContent = `${c.role}: ${c.name} ${c.phone?('- '+c.phone):''}`;
-      coords.appendChild(d);
-    });
-    const actions = document.getElementById('ev-actions'); actions.innerHTML='';
-    const a = document.createElement('a');
-    a.href=data.form; a.target='_blank';
-    a.className='btn primary';
-    a.textContent='Register on Google Form';
-    actions.appendChild(a);
-    card.classList.remove('hidden');
-    // smooth scroll to card
-    card.scrollIntoView({behavior:'smooth',block:'center'});
-  });
-
-  // deep link support e.g., details.html#Meta%20Brand
-  const hash = decodeURIComponent(location.hash.replace('#',''));
-  if(hash && events[hash]){
-    sel.value = hash;
-    sel.dispatchEvent(new Event('change'));
-  }
-});
